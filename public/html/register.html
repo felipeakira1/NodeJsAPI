@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Login</title>
+</head>
+<body>
+    <a href="/" class="btn-return">VOLTAR</a>
+    <main id="login">
+        <h1>Register</h1>
+        <form>
+            <label class="fullField">
+                Your name
+                <input type="text" id="name" name="name" placeholder="Type your full name" required>
+            </label>
+            <label class="fullField">
+                Username
+                <input type="text" id="username" name="username" placeholder="Type your username" required>
+            </label>
+            <label class="fullField">
+                E-mail
+                <input type="email" id="email" name="email" placeholder="Type your email" required>
+            </label>
+            <label class="fullField">
+                Password
+                <input type="password" id="password" name="password" placeholder="Type your password" required>
+            </label>
+            <label class="fullField">
+                Confirm password
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            </label>
+            <div id="loginButton">
+                <input type="submit" class="btn-green" value="Register" onclick="registerUser()">
+            </div>
+        </form>
+    </main>
+    <script>
+        
+        const name = document.getElementById('name').value;
+        console.log(name)
+        async function registerUser() {
+            const name = document.getElementById('name').value;
+            console.log(name)
+            // try {
+            //     const name = document.getElementById('name').value;
+            //     const username = document.getElementById('username').value;
+            //     const email = document.getElementById('email').value;
+            //     const password = document.getElementById('password').value;
+            //     const confirmPassword = document.getElementById('confirmPassword').value;
+    
+            //     if (password !== confirmPassword) {
+            //         console.error('Passwords do not match!');
+            //         return;
+            //     }
+    
+            //     const user = {
+            //         name,
+            //         username,
+            //         email,
+            //         password
+            //     };
+                
+    
+            //     const response = await fetch('/users/', {
+            //         method: 'POST',
+            //         headers: {
+            //             'Content-Type': 'application/json',
+            //         },
+            //         body: JSON.stringify(user),
+            //     });
+    
+            //     if (!response.ok) {
+            //         const errorData = await response.json();
+            //         console.error('Error adding user:', errorData.message);
+            //         // Handle error, show a message to the user, etc.
+            //     } else {
+            //         const responseData = await response.json();
+            //         console.log('User created successfully:', responseData);
+            //         // Handle success, redirect the user, show a success message, etc.
+            //     }
+            // } catch (error) {
+            //     console.error('Error in registerUser function:', error);
+            //     // Handle unexpected errors
+            // }
+        }
+    </script>
+</body>
+</html>
